@@ -1,27 +1,179 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  --line-color: #e5e7eb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90;
+}
+main {
+  @apply flex flex-col items-center px-4;
+}
+.bg-blue {
+  @apply bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263];
+}
+.bg-pink {
+  @apply bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394];
+}
+
+/* header  */
+header {
+  @apply z-[999] relative;
+}
+.navbar {
+  @apply fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75;
+}
+header .nav {
+  @apply flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0;
+}
+header ul {
+  @apply flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5;
+}
+header li {
+  @apply h-3/4 flex items-center justify-center relative;
+}
+header a {
+  @apply flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300;
+}
+header span {
+  @apply bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-800;
+}
+/* home  */
+.home {
+  @apply mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem];
+}
+.home_btn {
+  @apply flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium;
+}
+.home .title {
+  @apply mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl;
+}
+.home img {
+  @apply h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl;
+}
+
+.contact_btn {
+  @apply bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition;
+}
+.contact_icon {
+  @apply opacity-70 hover:translate-x-1 transition;
+}
+.download_btn {
+  @apply bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10;
+}
+.download_icon {
+  @apply opacity-60 hover:translate-y-1 transition;
+}
+
+.linkdin_btn {
+  @apply bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60;
+}
+.github_btn {
+  @apply bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60;
+}
+.section-divider {
+  @apply bg-gray-200 my-24 h-16 w-1 rounded-full hidden sm:block dark:bg-opacity-20;
+}
+
+/* about  */
+
+.about {
+  @apply mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28;
+}
+.about-heading {
+  @apply text-3xl font-medium capitalize mb-8 text-center;
+}
+/* projects  */
+
+.projects {
+  @apply scroll-mt-28 mb-28;
+}
+.project {
+  @apply mb-3 sm:mb-8 last:mb-0;
+}
+.project-card {
+  @apply bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition  dark:text-white dark:bg-white/10 dark:hover:bg-white/20;
+}
+.project-card__data {
+  @apply pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full;
+}
+.project-card__title {
+  @apply text-2xl font-semibold;
+}
+.project-card__content {
+  @apply mt-2 leading-relaxed text-gray-700 dark:text-white/70;
+}
+.project-card__nav {
+  @apply flex flex-wrap mt-4 gap-2 sm:mt-auto;
+}
+.project-card__navlist {
+  @apply bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70;
+}
+
+/* skills  */
+.skills {
+  @apply mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40;
+}
+.skills .skills_navbar {
+  @apply flex flex-wrap justify-center gap-2 text-lg text-gray-800;
+}
+.skills .skills_navlist {
+  @apply bg-white border border-black/10 rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80;
+}
+/* experience  */
+.experience {
+  @apply scroll-mt-28 mb-28 sm:mb-40;
+}
+.experience_title {
+  @apply font-semibold capitalize;
+}
+.experience_location {
+  @apply font-normal !mt-0;
+}
+.experience_description {
+  @apply !mt-1 !font-normal text-gray-700 dark:text-white/75;
+}
+/* contact  */
+.contact {
+  @apply mb-20 sm:mb-28 w-[min(100%,38rem)] text-center;
+}
+.contact_description {
+  @apply text-gray-700 -mt-6 dark:text-white/80;
+}
+.contact_description a {
+  @apply underline;
+}
+.contact_form {
+  @apply mt-10 flex flex-col dark:text-black;
+}
+.contact_form input {
+  @apply h-14 px-4 rounded-lg border border-black/10 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none;
+}
+.contact_form textarea {
+  @apply h-52 my-3 rounded-lg border border-black/10 p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none;
+}
+.contact_form button {
+  @apply flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950;
+}
+.submit_btn {
+  @apply h-5 w-5 animate-spin rounded-full border-b-2 border-white;
+}
+/* footer  */
+footer {
+  @apply mb-10 px-4 text-center text-gray-500;
+}
+footer small {
+  @apply mb-2 block text-xs;
+}
+footer p {
+  @apply text-xs;
+}
+footer span {
+  @apply font-semibold;
 }

@@ -55,6 +55,7 @@ export const portfolioData = {
         "Integrated REST APIs for property workflows",
         "Built admin dashboards with Chart.js analytics",
       ],
+      link:"https://withupside.com/"
     },
     {
       id: 2,
@@ -67,6 +68,7 @@ export const portfolioData = {
         "Integrated ChatGPT, Claude, Grok APIs",
         "Implemented real-time API workflows",
       ],
+      link:"https://topfrog.ai/"
     },
     {
       id: 3,
@@ -79,6 +81,7 @@ export const portfolioData = {
         "Converted Figma designs to production-ready pages",
         "Optimized Lighthouse performance score",
       ],
+      link:"https://www.radicalloop.com/"
     },
     {
       id: 4,
@@ -91,6 +94,7 @@ export const portfolioData = {
         "Handled complex API responses and real-time updates",
         "Optimized UI rendering and error handling",
       ],
+      link:"https://amsyst.radicalloop.com/"
     },
   ],
   skills: {

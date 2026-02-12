@@ -23,6 +23,7 @@ export const Projects: React.FC = () => {
               tech={project.tech}
               description={project.description}
               highlights={project.highlights}
+              url= {project.link}
             />
           ))}
         </div>

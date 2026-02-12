@@ -1,6 +1,5 @@
 import React from "react";
 import { portfolioData } from "../../data/portfolio";
-import { SkillBadge } from "../common/SkillBadge";
 import { SectionHeader } from "../common/SectionHeader";
 
 export const Skills: React.FC = () => {
@@ -46,7 +45,7 @@ export const Skills: React.FC = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {skillCategories.map((category, catIdx) => (
+          {skillCategories.map((category) => (
             <div
               key={category.title}
               className="group bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-transparent hover:bg-gradient-to-br hover:from-gray-50 hover:to-white hover:shadow-2xl transition-all duration-500"
@@ -67,7 +66,7 @@ export const Skills: React.FC = () => {
 
                 {/* Skills */}
                 <div className="space-y-3">
-                  {category.skills.map((skill, idx) => (
+                  {category.skills.map((skill) => (
                     <div
                       key={skill}
                       className="flex items-center gap-2 text-gray-700 group/item hover:text-gray-900 transition-colors"

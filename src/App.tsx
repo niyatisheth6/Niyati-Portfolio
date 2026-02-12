@@ -1,4 +1,3 @@
-import React from "react";
 import { Header } from "./components/sections/Header";
 import { Hero } from "./components/sections/Hero";
 import { Projects } from "./components/sections/Projects";

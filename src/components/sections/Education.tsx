@@ -12,7 +12,7 @@ export const Education: React.FC = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-          {portfolioData.education.map((edu, index) => (
+          {portfolioData.education.map((edu) => (
             <div
               key={edu.id}
               className="group relative bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-indigo-600 transition-all duration-500 hover:shadow-2xl hover:shadow-indigo-600/10 hover:-translate-y-2"

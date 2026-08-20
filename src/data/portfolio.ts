@@ -55,23 +55,10 @@ export const portfolioData = {
         "Integrated REST APIs for property workflows",
         "Built admin dashboards with Chart.js analytics",
       ],
-      link:"https://withupside.com/"
+      link: "https://withupside.com/",
     },
     {
       id: 2,
-      name: "TopFrog AI",
-      tech: ["Next.js", "TypeScript", "API Integration"],
-      description:
-        "Unified AI dashboard integrating multiple AI APIs into one seamless interface.",
-      highlights: [
-        "Built dashboard using Next.js + TypeScript",
-        "Integrated ChatGPT, Claude, Grok APIs",
-        "Implemented real-time API workflows",
-      ],
-      link:"https://topfrog.ai/"
-    },
-    {
-      id: 3,
       name: "Radicalloop Corporate Website",
       tech: ["Next.js", "TypeScript", "Tailwind CSS", "SEO"],
       description:
@@ -81,10 +68,10 @@ export const portfolioData = {
         "Converted Figma designs to production-ready pages",
         "Optimized Lighthouse performance score",
       ],
-      link:"https://www.radicalloop.com/"
+      link: "https://www.radicalloop.com/",
     },
     {
-      id: 4,
+      id: 3,
       name: "amsyst chatbot",
       tech: ["React.js", "REST API", "State Management"],
       description:
@@ -94,7 +81,48 @@ export const portfolioData = {
         "Handled complex API responses and real-time updates",
         "Optimized UI rendering and error handling",
       ],
-      link:"https://amsyst.radicalloop.com/"
+      link: "https://amsyst.radicalloop.com/",
+    },
+    {
+      id: 4,
+      name: "WizeContacts",
+      tech: ["React.js", "TypeScript", "Vite", "TanStack Query", "Tailwind CSS", "shadcn/ui"],
+      description:
+        "Scalable contact management SPA with e-signature workflows, RBAC, and real-time collaboration.",
+      highlights: [
+        "Built scalable SPA for People, Organizations, Groups, Files, and Dashboard",
+        "Developed e-signature and client onboarding workflows",
+        "Used TanStack Query for API state, caching, mutations, and pagination",
+        "Integrated REST APIs with Axios and real-time updates using Socket.IO",
+      ],
+      link: "https://www.wizecontacts.com/",
+    },
+    {
+      id: 5,
+      name: "Root Cause Health – Patient Wellness Portal",
+      tech: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Formik", "Zod", "shadcn/ui"],
+      description:
+        "Responsive patient portal for test kit registration, result access, and wellness tracking.",
+      highlights: [
+        "Built responsive patient portal for test kit registration and result access",
+        "Developed multi-step registration, OTP authentication, and profile flows",
+        "Integrated REST APIs with Axios and cookie-based JWT authentication",
+        "Built patient dashboard with kit tracking and PDF report access",
+      ],
+      link: "https://portal.rootcausehealth.com/register-kit",
+    },
+    {
+      id: 6,
+      name: "TopFrog AI",
+      tech: ["Next.js", "TypeScript", "API Integration"],
+      description:
+        "Unified AI dashboard integrating multiple AI APIs into one seamless interface.",
+      highlights: [
+        "Built dashboard using Next.js + TypeScript",
+        "Integrated ChatGPT, Claude, Grok APIs",
+        "Implemented real-time API workflows",
+      ],
+      link: "https://topfrog.ai/",
     },
   ],
   skills: {

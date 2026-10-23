@@ -157,6 +157,7 @@ export const portfolioData = {
   education: [
     {
       id: 1,
+      tab: "B.E",
       degree: "B.E - Information Technology",
       institution: "Atmiya Institute of Technology and Science",
       location: "Rajkot, Gujarat",
@@ -165,6 +166,7 @@ export const portfolioData = {
     },
     {
       id: 2,
+      tab: "HSC",
       degree: "HSC (11th, 12th Science)",
       institution: "Sheth Hasanali High School",
       location: "Dholka, Ahmedabad",

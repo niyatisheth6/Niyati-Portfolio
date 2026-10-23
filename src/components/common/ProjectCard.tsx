@@ -16,13 +16,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   url,
 }) => {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2 h-full flex flex-col">
+    <div className="bg-ink-800 border border-line/10 rounded-xl p-6 hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 ease-out hover:-translate-y-2 h-full flex flex-col">
       {/* Header */}
       <div className="mb-4">
-        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+        <h3 className="text-xl font-bold text-zinc-100 mb-2 line-clamp-2">
           {name}
         </h3>
-        <p className="text-gray-700 text-sm mb-3 line-clamp-2">{description}</p>
+        <p className="text-zinc-400 text-sm mb-3 line-clamp-2">{description}</p>
       </div>
 
       {/* Tech Stack */}
@@ -30,7 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         {tech.map((t) => (
           <span
             key={t}
-            className="px-3 py-1 bg-gradient-to-r from-indigo-100 to-purple-100 text-indigo-700 text-xs font-semibold rounded-full hover:shadow-md transition-shadow"
+            className="px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full hover:shadow-md transition-shadow"
           >
             {t}
           </span>
@@ -43,9 +43,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {highlights.map((highlight, idx) => (
             <li
               key={idx}
-              className="text-sm text-gray-600 flex items-start gap-2"
+              className="text-sm text-zinc-400 flex items-start gap-2"
             >
-              <span className="text-indigo-600 font-bold mt-1">•</span>
+              <span className="text-emerald-400 font-bold mt-1">•</span>
               <span>{highlight}</span>
             </li>
           ))}
@@ -56,7 +56,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 text-blue-800 font-medium hover:gap-3 transition-all duration-300 group/link mt-3 cursor-pointer"
+        className="inline-flex items-center gap-2 text-emerald-400 font-medium hover:gap-3 hover:text-emerald-300 transition-all duration-300 group/link mt-3 cursor-pointer"
       >
         View Project
         <svg
@@ -66,9 +66,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           className="lucide lucide-arrow-right group-hover/link:translate-x-1 transition-transform"
           aria-hidden="true"
         >
